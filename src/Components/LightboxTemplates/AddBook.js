@@ -1,7 +1,7 @@
 import React from "react";
 import { RenderTemplate } from "./LightboxTemplates";
 import { connect } from "react-redux";
-import closeIcon from "/img/avatar.png";
+import closeIcon from "/img/close.png";
 
 class AddBook extends React.Component {
   constructor(props) {

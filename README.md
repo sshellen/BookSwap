@@ -5,15 +5,15 @@ For people who want to brush up on their skills and learn new ones, I would high
 
 The requirements for the test/challenge was that it fullfill the following user stories:
 
-  * User can view all books posted by every user.
+- User can view all books posted by every user.
 
-  * User can add a new book.
+- User can add a new book.
 
-  * User can update their settings to store their full name, city, and state.
+- User can update their settings to store their full name, city, and state.
 
-  * User can propose a trade and wait for the other user to accept the trade.
-  
-I used a Redux state tree to persist data throughout the site by saving it to local storage under 'appState'. This 
+- User can propose a trade and wait for the other user to accept the trade.
+
+I used a Redux state tree to persist data throughout the site by saving it to local storage under 'appState'. This
 will allow page refresh without losing data making it feel more like a session.
 
 I deployed the code in this repo to Netlify, where it is available to be seen here: https://eclectic-haupia-8a69c6.netlify.app/
