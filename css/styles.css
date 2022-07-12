@@ -146,7 +146,7 @@ h3 {
   background-color: #fff;
   border-radius: 5px;
   font-size: 14px;
-  background-image: url("/img/arrowDown.png");
+  background-image: url("/arrowDown.png");
   background-position: top 8px right 6px;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -177,14 +177,14 @@ h3 {
   font-style: normal;
   text-decoration: none;
   font-size: 16px;
-  background-image: url("/img/arrowUp.png");
+  background-image: url("/arrowUp.png");
   background-position: top 8px right 0;
   padding-right: 20px;
   background-repeat: no-repeat;
   background-size: 12px;
 }
 .filter label a.open {
-  background-image: url("/img/arrowDown.png");
+  background-image: url("/arrowDown.png");
 }
 .filter ul {
   list-style: none;

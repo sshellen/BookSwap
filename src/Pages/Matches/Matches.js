@@ -8,6 +8,7 @@ import "./css/index.css";
 import matchTitle from "/svg/matchesTitle.svg";
 import matchesHero from "/img/matches.png";
 import swapIcon from "/svg/swapIcon.svg";
+import { Link } from "react-router-dom";
 
 class Matches extends React.Component {
   constructor(props) {
@@ -206,106 +207,121 @@ class Matches extends React.Component {
             <div className="section">
               <div className="wrapper">
                 <h2>Select which book to swap for.</h2>
-
-                <table className="matchTable">
-                  <thead>
-                    <tr>
-                      <th>Their book</th>
-                      <th>
-                        <i>for</i>
-                      </th>
-                      <th>your book</th>
-                    </tr>
-                  </thead>
-                  {this.state.theOnesILike.map((theirBook, index) => (
-                    <tbody key={`tableRowForMatches${index}`}>
-                      <tr className={index % 2 === 0 ? "even" : ""}>
-                        <td className="book">
-                          <h3 className="mobile">Their book:</h3>
-                          <a
-                            href="#"
-                            onClick={() => this.showDetails(theirBook.title)}
-                            className="bookTitle"
-                          >
-                            {theirBook.title}
-                          </a>
-
-                          <div className="byLine">by {theirBook.author}</div>
-                          <div className="ownedBy">
-                            Owned by
-                            <br />
+                {this.state.theOnesILike.length === 0 ? (
+                  <p>
+                    You have no matches to show at this time. Make sure that you
+                    have selected books that you are interested in. Visit the{" "}
+                    <Link to="/books">Find Books</Link> page to see books
+                    offered by other users.
+                  </p>
+                ) : (
+                  <table className="matchTable">
+                    <thead>
+                      <tr>
+                        <th>Their book</th>
+                        <th>
+                          <i>for</i>
+                        </th>
+                        <th>your book</th>
+                      </tr>
+                    </thead>
+                    {this.state.theOnesILike.map((theirBook, index) => (
+                      <tbody key={`tableRowForMatches${index}`}>
+                        <tr className={index % 2 === 0 ? "even" : ""}>
+                          <td className="book">
+                            <h3 className="mobile">Their book:</h3>
                             <a
                               href="#"
-                              onClick={(event) =>
-                                this.bookList(event, theirBook.owner)
-                              }
+                              onClick={() => this.showDetails(theirBook.title)}
+                              className="bookTitle"
                             >
-                              {theirBook.owner}
+                              {theirBook.title}
                             </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div className="desktop">
-                            <img src={swapIcon} alt="swap for" />
-                          </div>
-                          <h3 className="mobile">
-                            <i>swap for...</i>
-                          </h3>
-                        </td>
 
-                        {this.includesTitle(theirBook.title) !== "" ? (
+                            <div className="byLine">by {theirBook.author}</div>
+                            <div className="ownedBy">
+                              Owned by
+                              <br />
+                              <a
+                                href="#"
+                                onClick={(event) =>
+                                  this.bookList(event, theirBook.owner)
+                                }
+                              >
+                                {theirBook.owner}
+                              </a>
+                            </div>
+                          </td>
                           <td>
-                            <h3 className="mobile">Your book:</h3>{" "}
-                            <div>{this.includesTitle(theirBook.title)}</div>
-                            <div className="space10" />
-                            <button
-                              className="cancelButton"
-                              onClick={(e) =>
-                                this.takeOffList(e, theirBook.title)
-                              }
-                            >
-                              CANCEL
-                            </button>
+                            <div className="desktop">
+                              <img src={swapIcon} alt="swap for" />
+                            </div>
+                            <h3 className="mobile">
+                              <i>swap for...</i>
+                            </h3>
                           </td>
-                        ) : (
-                          <td className="myBook" id={theirBook.title}>
-                            <h3 className="mobile">Your book:</h3>
-                            {this.state.theOnesTheyLike.map(
-                              (myBook, index) =>
-                                this.userInterest(theirBook.owner, myBook) && (
-                                  <div
-                                    className="formRow"
-                                    key={`myBook${index}`}
-                                    id={`myBook${index}`}
-                                  >
-                                    <input
-                                      type="radio"
-                                      name={theirBook.title}
-                                      defaultValue={myBook.title}
-                                      id={`input${index}`}
-                                      onClick={(e) =>
-                                        this.addToSelected(e, myBook, theirBook)
-                                      }
-                                    />
-                                    <label htmlFor={`input${index}`}>
-                                      <a
-                                        href="#"
-                                        onClick={() =>
-                                          this.showDetails(myBook.title)
+
+                          {this.includesTitle(theirBook.title) !== "" ? (
+                            <td>
+                              <h3 className="mobile">Your book:</h3>{" "}
+                              <div>{this.includesTitle(theirBook.title)}</div>
+                              <div className="space10" />
+                              <button
+                                className="cancelButton"
+                                onClick={(e) =>
+                                  this.takeOffList(e, theirBook.title)
+                                }
+                              >
+                                CANCEL
+                              </button>
+                            </td>
+                          ) : (
+                            <td className="myBook" id={theirBook.title}>
+                              <h3 className="mobile">Your book:</h3>
+                              {this.state.theOnesTheyLike.map(
+                                (myBook, index) =>
+                                  this.userInterest(
+                                    theirBook.owner,
+                                    myBook
+                                  ) && (
+                                    <div
+                                      className="formRow"
+                                      key={`myBook${index}`}
+                                      id={`myBook${index}`}
+                                    >
+                                      <input
+                                        type="radio"
+                                        name={theirBook.title}
+                                        defaultValue={myBook.title}
+                                        id={`input${index}`}
+                                        onClick={(e) =>
+                                          this.addToSelected(
+                                            e,
+                                            myBook,
+                                            theirBook
+                                          )
                                         }
-                                      >
-                                        {myBook.title}
-                                      </a>
-                                    </label>
-                                  </div>
-                                )
-                            )}
-                          </td>
-                        )}
-                      </tr>
-                    </tbody>
-                  ))}
-                </table>
+                                      />
+                                      <label htmlFor={`input${index}`}>
+                                        <a
+                                          href="#"
+                                          onClick={() =>
+                                            this.showDetails(myBook.title)
+                                          }
+                                        >
+                                          {myBook.title}
+                                        </a>
+                                      </label>
+                                    </div>
+                                  )
+                              )}
+                            </td>
+                          )}
+                        </tr>
+                      </tbody>
+                    ))}
+                  </table>
+                )}
               </div>
             </div>
             <div className="tableButton wrapper">
