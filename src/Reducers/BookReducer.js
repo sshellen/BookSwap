@@ -14,8 +14,8 @@ const UPDATE_PROFILE = "UPDATE_PROFILE";
 
 const defaultState = {
   profile: {
-    name: "",
-    email: "",
+    name: "Guest User",
+    email: "bookworm@foobar.com",
     city: "",
     state: "",
     username: "",
