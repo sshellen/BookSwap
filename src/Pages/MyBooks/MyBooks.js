@@ -111,6 +111,11 @@ class Books extends React.Component {
     this.pendingSwaps = this.props.matches.length;
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.myBooks !== this.props.myBooks) {
+      this.filterAndSort(this.props.myBooks);
+    }
+  }
   checkInterested = (title) => {
     let interested = this.props.interested.filter(
       (book) => book.title === title
@@ -187,9 +192,8 @@ class Books extends React.Component {
                             {this.checkInterested(book.title).length > 0
                               ? this.checkInterested(book.title).map(
                                   (obj, index) => (
-                                    <div>
+                                    <div key={`interested${index}`}>
                                       <a
-                                        key={`interestedLink${index}`}
                                         href="#"
                                         onClick={(event) =>
                                           this.bookList(event, obj.user)
