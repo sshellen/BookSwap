@@ -40,7 +40,7 @@ class Confirmation extends React.Component {
 
   closeDetails = () => {
     event.preventDefault();
-    this.setState({ showDetails: false });
+    this.setState({ showDetails: false, bookList: false });
     this.content.classList.remove("fixed");
   };
 
