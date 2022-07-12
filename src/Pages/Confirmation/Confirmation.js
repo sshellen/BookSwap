@@ -66,7 +66,7 @@ class Confirmation extends React.Component {
   }
 
   render() {
-    const { matches, myBooks } = this.props;
+    const { matches, myBooks, allBooks, profile } = this.props;
 
     return (
       <div id="confirmationPage">
@@ -74,9 +74,9 @@ class Confirmation extends React.Component {
         <div className="main">
           <div className="hero">
             <div className="pageTitle">
-              <img src={pageTitle} />
+              <img src={pageTitle} alt="page title" />
             </div>
-            <img src={confHero} />
+            <img src={confHero} alt="hero image" />
           </div>
 
           <div className="section">
@@ -190,7 +190,7 @@ class Confirmation extends React.Component {
                   <div className="space10" />
 
                   <Link to="/books" className="ctaLink">
-                    <img src={leftArrow} />
+                    <img src={leftArrow} alt="left arrow" />
                     <span>FIND BOOKS</span>
                   </Link>
                   <div className="space40" />
@@ -241,6 +241,7 @@ const mapStateToProps = (state) => {
     matches: state.matches,
     myBooks: state.myBooks,
     allBooks: state.allBooks,
+    profile: state.profile,
   };
 };
 
