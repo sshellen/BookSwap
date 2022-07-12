@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "/svg/logo.svg";
+import hamburger from "/img/hamburgerMenu.png";
+import closeIcon from "/img/whiteCloseIcon.png";
 
 const HamburgerMenu = () => {
   const [menuState, setMenuState] = useState("closed");
@@ -20,17 +23,13 @@ const HamburgerMenu = () => {
       <div className="header">
         <div className="logo">
           <Link to="/myBooks">
-            <img src="/svg/logo.svg" />
+            <img src={logo} />
           </Link>
         </div>
         <div className="nav">
           <a href="#" onClick={toggleMenu} id="closeIcon">
             <img
-              src={
-                menuState === "closed"
-                  ? "/img/hamburgerMenu.png"
-                  : "/img/whiteCloseIcon.png"
-              }
+              src={menuState === "closed" ? hamburger : closeIcon}
               className="hamburgerIcon"
             />
           </a>
