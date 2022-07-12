@@ -1,0 +1,32 @@
+@media only screen and (max-width: 899px) {
+  .lightbox {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+  .lightbox .close {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .lightbox .close img {
+    width: 30px;
+    height: 30px;
+    padding: 0 0 20px 0;
+  }
+
+  .buttonBlue,
+  .cancelButton {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}

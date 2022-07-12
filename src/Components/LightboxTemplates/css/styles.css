@@ -1,0 +1,170 @@
+.lightbox {
+  position: absolute;
+  background: #fff;
+  color: #242124;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 50px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.lightbox h2 {
+  margin-bottom: 0;
+}
+.lightbox .byLine {
+  margin: 0;
+}
+.lightbox .content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.lightbox .content p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #242124;
+  margin: 10px 0 30px 0;
+  max-width: 500px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.lightbox .close {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.lightbox .close img {
+  width: 30px;
+  height: 30px;
+}
+
+.lightbox .buttonRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.lightbox .container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.lightbox .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.lightbox .formRow {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+.lightbox .formRow label {
+  font-family: lato, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.lightbox .formRow input,
+.lightbox .formRow textarea {
+  border: 1px solid #999;
+  width: 300px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.lightbox .formRow select {
+  -webkit-appearance: none;
+  border: 1px solid #999;
+  padding: 5px 40px 5px 5px;
+  background-color: #fff;
+  font-size: 14px;
+  background-image: url("/img/arrowDown.png");
+  background-position: top 8px right 6px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  margin: 0;
+  border-radius: 0;
+}
+.lightbox .requiredTag {
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.lightbox .requiredTag:after {
+  content: "\BB";
+}
+.lightbox .addBookForm .requiredFields {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.lightbox .addBookForm .buttonBar {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  justify-content: flex-end;
+}
+.lightbox .addBookForm .formRow.required input,
+.lightbox .addBookForm .formRow.required textarea {
+  border-color: #bd3913;
+}
+.lightbox .addBookForm.formRow.required label {
+  color: #bd3913;
+}
+.lightbox .alertMessage {
+  margin: 20px 0;
+  color: #900;
+  background-color: #f8e8e8;
+  border: 1px solid #bd3913;
+  padding: 0 10px;
+  width: 300px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+}
+.lightbox .alertMessage p {
+  margin: 10px 5px;
+}
+#usersBookList {
+  font-family: lato, sans-serif;
+  font-size: 14px;
+}
+
+#usersBookList tr th,
+#usersBookList tr td {
+  text-align: left;
+  padding-right: 20px;
+}
+
+#usersBookList td:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#usersBookList tr th {
+  padding-bottom: 10px;
+}
+#usersBookList tr td {
+  padding-bottom: 10px;
+}

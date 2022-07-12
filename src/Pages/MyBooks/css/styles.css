@@ -1,0 +1,58 @@
+#myBooks .pageTitle img {
+  height: 50px;
+}
+#myBooks .mobile {
+  display: none;
+}
+#myBooks .desktop {
+  display: block;
+}
+#myBooks .pageTitle {
+  bottom: 1px;
+}
+#myBooksTable {
+  width: 100%;
+}
+#myBooksTable td {
+  vertical-align: top;
+}
+
+#myBooksTable td a.bookTitle {
+  font-weight: bold;
+}
+#myBooksTable th {
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+#myBooksTable tbody tr:first-child td {
+  padding: 0 0 20px 0;
+}
+#myBooksTable tbody tr td {
+  border-bottom: 1px dashed #999;
+  padding: 20px 0;
+}
+#myBooksTable tbody tr:last-child td {
+  border-bottom: none;
+}
+#myBooks h2 span {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 20px;
+  font-family: lato, sans-serif;
+  font-size: 16px;
+}
+#myBooks h2 span img {
+  margin-right: 5px;
+}
+#myBooks h2 a,
+#myBooks h2 a:active,
+#myBooks h2 a:visited {
+  color: #1172a3;
+  text-decoration: none;
+}
+#myBooks h2 a:hover {
+  text-decoration: underline;
+}

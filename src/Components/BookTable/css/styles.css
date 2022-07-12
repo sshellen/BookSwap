@@ -1,0 +1,46 @@
+#bookSwapFindBooks .desktop {
+  display: block;
+}
+#bookSwapFindBooks .mobile {
+  display: none;
+}
+#bookSwapFindBooks.pageTitle {
+  bottom: 1px;
+}
+#bookSwapFindBooks .pageTitle img {
+  height: 50px;
+}
+#bookSwapFindBooks .results {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+#bookSwapFindBooks .bookList tbody tr:first-child td {
+  padding: 0 0 20px 0;
+}
+#bookSwapFindBooks .bookList tbody tr td {
+  border-bottom: 1px dashed #999;
+  padding: 20px 0;
+}
+#bookSwapFindBooks .bookList tbody tr:last-child td {
+  border-bottom: none;
+}
+#bookSwapFindBooks .bookList tbody td:last-child {
+  text-align: center;
+  width: 30px;
+}
+#bookSwapFindBooks .bookList {
+  width: 100%;
+}
+#bookSwapFindBooks .bookList td {
+  vertical-align: top;
+}
+#bookSwapFindBooks .bookList td .byLine {
+  font-size: 14px;
+}
+#bookSwapFindBooks .bookList td a.bookTitle {
+  font-weight: bold;
+}
+#bookSwapFindBooks .bookList th {
+  text-align: left;
+  padding-bottom: 20px;
+}

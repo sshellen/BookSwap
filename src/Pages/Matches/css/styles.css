@@ -1,0 +1,82 @@
+#bookSwapMatches .pageTitle {
+  bottom: 0px;
+}
+#bookSwapMatches .pageTitle img {
+  height: 50px;
+}
+#bookSwapMatches .mobile {
+  display: none;
+}
+#bookSwapMatches input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 3px 5px 3px 0;
+  border-color: #999;
+}
+#bookSwapMatches form {
+  box-sizing: border-box;
+}
+#bookSwapMatches .formRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+}
+#bookSwapMatches .formRow label {
+  font-family: lato, sans-serif;
+  font-size: 14px;
+}
+.matchTable {
+  width: 100%;
+  box-sizing: border-box;
+}
+.matchTable td {
+  height: 100px;
+  font-size: 14px;
+}
+.matchTable th {
+  margin-bottom: 20px;
+}
+.matchTable td,
+.matchTable th {
+  text-align: left;
+}
+.matchTable td:nth-child(2),
+.matchTable th:nth-child(2) {
+  width: 60px;
+  text-align: center;
+}
+.matchTable td:nth-child(2) img {
+  width: 40px;
+  vertical-align: middle;
+}
+.matchTable td:nth-child(1),
+.matchTable th:nth-child(1),
+.matchTable td:nth-child(3),
+.matchTable th:nth-child(3) {
+  width: 200px;
+  text-align: left;
+}
+.matchTable tr {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.matchTable tr.even {
+  background-color: #f5f5f5;
+}
+.ownedBy {
+  margin-top: 20px;
+}
+.select {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

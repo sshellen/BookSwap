@@ -1,0 +1,50 @@
+@media only screen and (max-width: 899px) {
+  #profilePage .pageTitle img {
+    height: 30px;
+  }
+  #profilePage table {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  #profilePage .content p {
+    font-size: 13px;
+  }
+
+  #profilePage form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #profilePage .formRow label {
+    font-size: 13px;
+  }
+  #profilePage .formRow input,
+  #profilePage .formRow select {
+    width: 100%;
+  }
+  #profilePage .formRow select {
+    font-size: 13px;
+  }
+
+  #profilePage .profileForm .requiredFields {
+    font-size: 12px;
+  }
+  #profilePage .profileForm .buttonBar {
+    width: 100%;
+  }
+
+  #profilePage .alertMessage {
+    width: 100%;
+  }
+
+  #profilePage h2 a {
+    font-size: 13px;
+  }
+  .buttonBlue,
+  .cancelButton {
+    font-size: 12px;
+
+    padding: 8px 15px;
+  }
+}

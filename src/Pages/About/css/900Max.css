@@ -1,0 +1,15 @@
+@media only screen and (max-width: 899px) {
+  #aboutPage .twoCol p,
+  #aboutPage .twoCol img {
+    width: 50%;
+    font-size: 13px;
+  }
+
+  #aboutPage .pageTitle img {
+    height: 30px;
+  }
+  #aboutPage .divider {
+    margin: 30px 0;
+    border-top: 1px dashed #999999;
+  }
+}

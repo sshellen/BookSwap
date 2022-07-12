@@ -1,0 +1,77 @@
+@media only screen and (max-width: 899px) {
+  #bookSwapMatches .pageTitle img {
+    height: 30px;
+  }
+  #bookSwapMatches .desktop {
+    display: none;
+  }
+  #bookSwapMatches .mobile {
+    display: block;
+  }
+  #bookSwapMatches h3 {
+    font-size: 14px;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .matchTable {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .matchTable tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .matchTable td {
+    height: auto;
+    font-size: 14px;
+  }
+  .matchTable thead {
+    display: none;
+  }
+  .matchTable th {
+    display: none;
+  }
+  .matchTable td,
+  .matchTable th {
+    text-align: left;
+  }
+
+  .matchTable td:nth-child(1),
+  .matchTable td:nth-child(2),
+  .matchTable td:nth-child(3) {
+    width: 100%;
+    text-align: left;
+  }
+  .matchTable td:nth-child(2) {
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  #bookSwapMatches .formRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .matchTable tr,
+  .matchTable tr.even {
+    background-color: #fff;
+  }
+  .matchTable .cancelButton {
+    font-size: 12px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 8px 15px;
+    margin-right: 10px;
+  }
+}

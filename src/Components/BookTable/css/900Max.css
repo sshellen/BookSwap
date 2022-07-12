@@ -1,0 +1,61 @@
+@media only screen and (max-width: 899px) {
+  #bookSwapFindBooks .desktop {
+    display: none;
+  }
+  #bookSwapFindBooks .mobile {
+    display: block;
+  }
+  #bookSwapFindBooks h3 {
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  #bookSwapFindBooks .pageTitle img {
+    height: 30px;
+  }
+
+  #bookSwapFindBooks .results {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #bookSwapFindBooks .bookList thead {
+    display: none;
+  }
+  #bookSwapFindBooks .bookList tbody tr {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  #bookSwapFindBooks .bookList tbody tr td {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 20px 0;
+    border-bottom: none;
+  }
+
+  #bookSwapFindBooks .bookList tbody tr:last-child td {
+    border-bottom: none;
+  }
+  #bookSwapFindBooks .bookList {
+    width: 100%;
+  }
+
+  #bookSwapFindBooks .bookList tbody td:last-child {
+    text-align: left;
+    width: auto;
+  }
+  #bookSwapFindBooks .bookList td .byLine {
+    display: none;
+  }
+  #bookSwapFindBooks .bookList td a.bookTitle {
+    font-weight: bold;
+  }
+}

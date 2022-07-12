@@ -1,0 +1,51 @@
+.confirmationTable {
+  width: 100%;
+}
+#confirmationPage .mobile {
+  display: none;
+}
+#confirmationPage .pageTitle img {
+  height: 50px;
+}
+.confirmationTable td {
+  height: 100px;
+  font-size: 14px;
+}
+.confirmationTable th {
+  margin-bottom: 20px;
+}
+.confirmationTable td,
+.confirmationTable th {
+  text-align: left;
+}
+.confirmationTable tr {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.confirmationTable td,
+.confirmationTable th {
+  width: 200px;
+}
+.confirmationTable td:nth-child(2),
+.confirmationTable th:nth-child(2) {
+  width: 60px;
+  text-align: center;
+}
+.confirmationTable tr.even {
+  background-color: #f5f5f5;
+}
+
+.ownedBy {
+  margin-top: 20px;
+}
+.select {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
