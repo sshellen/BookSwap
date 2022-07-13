@@ -1,2 +1,12 @@
 @media only screen and (max-width: 599px) {
+  #aboutPage .twoCol {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  #aboutPage .twoCol p,
+  #aboutPage .twoCol img {
+    width: 100%;
+    font-size: 13px;
+  }
 }

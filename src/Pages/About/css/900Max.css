@@ -4,7 +4,10 @@
     width: 50%;
     font-size: 13px;
   }
-
+  #aboutPage .twoCol img {
+    max-width: 500px;
+    text-align: center;
+  }
   #aboutPage .pageTitle img {
     width: 149px;
   }
