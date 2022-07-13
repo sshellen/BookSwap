@@ -2,6 +2,9 @@
   h2 {
     font-size: 18px;
   }
+  .pageTitle img {
+    height: 30px;
+  }
   .carousel h3 {
     display: flex;
     flex-flow: row nowrap;

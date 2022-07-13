@@ -5,7 +5,7 @@ import BookList from "/src/Components/LightboxTemplates/BookList";
 import Header from "/src/Components/Header/Header";
 import Footer from "/src/Components/Footer/Footer";
 import "./css/index.css";
-import matchTitle from "/svg/matchesTitle.svg";
+import matchTitle from "/svg/myMatchesTitle.svg";
 import matchesHero from "/img/matches.png";
 import swapIcon from "/svg/swapIcon.svg";
 import { Link } from "react-router-dom";

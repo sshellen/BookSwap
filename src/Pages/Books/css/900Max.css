@@ -6,7 +6,7 @@
     display: block;
   }
   #bookSwapFindBooks .pageTitle img {
-    height: 30px;
+    width: 261px;
   }
   #bookSwapFindBooks .formAndFilter {
     display: flex;

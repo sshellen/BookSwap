@@ -1,6 +1,6 @@
 @media only screen and (max-width: 899px) {
   #profilePage .pageTitle img {
-    height: 30px;
+    width: 215px;
   }
   #profilePage table {
     width: 100%;

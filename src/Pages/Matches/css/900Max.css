@@ -1,6 +1,6 @@
 @media only screen and (max-width: 899px) {
   #bookSwapMatches .pageTitle img {
-    height: 30px;
+    width: 289px;
   }
   #bookSwapMatches .desktop {
     display: none;

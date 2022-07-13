@@ -62,6 +62,9 @@ h3 {
   bottom: 1px;
   left: 40px;
 }
+.pageTitle img {
+  height: 50px;
+}
 .sticky {
   position: sticky;
 }

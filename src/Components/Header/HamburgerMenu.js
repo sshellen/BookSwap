@@ -53,11 +53,14 @@ const HamburgerMenu = () => {
             ACCOUNT
             <ul>
               <li>
-                <Link to="profile" onBlur={putFocus}>
-                  SETTINGS
-                </Link>
+                <Link to="/profile">SETTINGS</Link>
               </li>
               <li>MESSAGES</li>
+              <li>
+                <Link to="/home" onBlur={putFocus}>
+                  SIGN OUT
+                </Link>
+              </li>
             </ul>
           </li>
         </ul>
