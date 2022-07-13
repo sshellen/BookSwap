@@ -25,28 +25,29 @@ const BookTable = ({
         </thead>
         <tbody>
           {list.map((book, ind) => (
-            <tr key={"row" + ind}>
+            <tr key={`row${ind}`}>
               <td>
-                <h3 className="mobile">Book Title:</h3>
                 <a href="#" onClick={() => onClickHandler(book)}>
                   {book.title}
                 </a>
                 <div className="byLine">{book.author}</div>
               </td>
               <td>
-                <h3 className="mobile">Book Genre:</h3>
+                <h3 className="mobile">Genre:</h3>
                 {book.genre}
               </td>
               <td>
-                <h3 className="mobile">Book Owner:</h3>
+                <h3 className="mobile">Owner:</h3>
                 <a href="#" onClick={(e) => bookListHandler(e, book.owner)}>
                   {book.owner}
                 </a>
               </td>
               <td>
-                <h3 className="mobile">Interested</h3>
-
+                <label htmlFor={`row${ind}`} className="mobile">
+                  Interested:
+                </label>
                 <Checkbox
+                  id={`row${ind}`}
                   name={book.title}
                   style={{ width: "30px" }}
                   checked={book.interested}

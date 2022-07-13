@@ -14,9 +14,7 @@
   flex: 1 1 auto;
   box-sizing: border-box;
 }
-#bookSwapFindBooks .bookList tbody tr:first-child td {
-  padding: 0 0 20px 0;
-}
+
 #bookSwapFindBooks .bookList tbody tr td {
   border-bottom: 1px dashed #999;
   padding: 20px 0;

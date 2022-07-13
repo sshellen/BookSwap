@@ -14,7 +14,7 @@ The requirements for the test/challenge was that it fullfill the following user 
 - User can propose a trade and wait for the other user to accept the trade.
 
 The biggest challenge for me, was how to go about designing the experience when their are multiple mappings. That is, when several users like
-the same book of yours and you want to swap with more than one of them because you have mutual interest in one or more of their books. 
+the same book of yours and you want to swap with more than one of them because you have mutual interest in one or more of their books.
 
 I used a Redux state tree to persist data throughout the site by saving it to local storage under 'appState'. This
 will allow page refresh without losing data making it feel more like a session.

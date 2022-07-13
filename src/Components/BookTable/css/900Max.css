@@ -5,7 +5,9 @@
   #bookSwapFindBooks .mobile {
     display: block;
   }
-  #bookSwapFindBooks h3 {
+  #bookSwapFindBooks h3,
+  #bookSwapFindBooks label {
+    font-weight: 700;
     margin: 0 10px 0 0;
     padding: 0;
     font-size: 14px;
@@ -19,6 +21,7 @@
     box-sizing: border-box;
     width: 100%;
   }
+
   #bookSwapFindBooks .bookList thead {
     display: none;
   }
@@ -31,14 +34,28 @@
     margin-bottom: 20px;
     box-sizing: border-box;
   }
-
+  #bookSwapFindBooks .bookList tbody tr {
+    padding: 0;
+  }
   #bookSwapFindBooks .bookList tbody tr td {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0 0 20px 0;
+    align-items: center;
+    padding: 10px;
     border-bottom: none;
+  }
+
+  #bookSwapFindBooks .bookList tbody tr td:nth-child(1) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    background-color: #eeeeee;
+  }
+
+  #bookSwapFindBooks .bookList tbody tr td:nth-child(1) a {
+    font-weight: bold;
   }
 
   #bookSwapFindBooks .bookList tbody tr:last-child td {
@@ -52,8 +69,8 @@
     text-align: left;
     width: auto;
   }
-  #bookSwapFindBooks .bookList td .byLine {
-    display: none;
+  #bookSwapFindBooks .bookList td .byLine:before {
+    content: "by ";
   }
   #bookSwapFindBooks .bookList td a.bookTitle {
     font-weight: bold;
