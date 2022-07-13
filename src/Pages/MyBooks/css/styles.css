@@ -25,9 +25,6 @@
   padding-bottom: 20px;
 }
 
-#myBooksTable tbody tr:first-child td {
-  padding: 0 0 20px 0;
-}
 #myBooksTable tbody tr td {
   border-bottom: 1px dashed #999;
   padding: 20px 0;
@@ -55,4 +52,7 @@
 }
 #myBooks h2 a:hover {
   text-decoration: underline;
+}
+#myBooks .byLine {
+  font-size: 14px;
 }

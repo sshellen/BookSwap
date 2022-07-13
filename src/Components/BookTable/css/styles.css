@@ -18,6 +18,7 @@
 #bookSwapFindBooks .bookList tbody tr td {
   border-bottom: 1px dashed #999;
   padding: 20px 0;
+  font-size: 14px;
 }
 #bookSwapFindBooks .bookList tbody tr:last-child td {
   border-bottom: none;

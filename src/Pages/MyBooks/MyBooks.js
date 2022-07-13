@@ -177,13 +177,13 @@ class Books extends React.Component {
                       <tr key={`myBook${index}`}>
                         <td>
                           {" "}
-                          <h3 className="mobile">Book Title:</h3>
                           <a href="#" onClick={() => this.showDetails(book)}>
                             {book.title}
                           </a>
+                          <div className="byLine">by {book.author}</div>
                         </td>
                         <td>
-                          <h3 className="mobile">Book Genre:</h3>
+                          <h3 className="mobile">Genre:</h3>
                           {book.genre}
                         </td>
                         <td>

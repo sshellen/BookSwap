@@ -30,7 +30,7 @@ const BookTable = ({
                 <a href="#" onClick={() => onClickHandler(book)}>
                   {book.title}
                 </a>
-                <div className="byLine">{book.author}</div>
+                <div className="byLine">by {book.author}</div>
               </td>
               <td>
                 <h3 className="mobile">Genre:</h3>
@@ -43,9 +43,6 @@ const BookTable = ({
                 </a>
               </td>
               <td>
-                <label htmlFor={`row${ind}`} className="mobile">
-                  Interested:
-                </label>
                 <Checkbox
                   id={`row${ind}`}
                   name={book.title}
@@ -53,6 +50,9 @@ const BookTable = ({
                   checked={book.interested}
                   callback={interestedHandler}
                 />
+                <label htmlFor={`row${ind}`} className="mobile">
+                  Interested
+                </label>
               </td>
             </tr>
           ))}

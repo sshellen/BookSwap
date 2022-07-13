@@ -17,22 +17,40 @@
   #myBooks thead {
     display: none;
   }
+  #myBooksTable {
+    width: 100%;
+  }
   #myBooksTable tr {
     display: flex;
     flex-flow: column;
+    width: 100%;
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
   }
-  #myBooksTable td {
+  #myBooksTable tr {
+    padding: 0;
+  }
+  #myBooksTable tbody tr td {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    vertical-align: top;
+    padding: 10px 20px;
+    border-bottom: none;
     font-size: 14px;
   }
 
+  #myBooksTable tbody tr td:nth-child(1) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+  }
+  #myBooksTable tbody tr td:nth-child(1) a {
+    font-weight: bold;
+  }
   .sortMenu select {
     font-size: 12px;
   }
@@ -41,7 +59,6 @@
   }
   #myBooksTable tbody tr td {
     border-bottom: none;
-    padding: 10px 0;
   }
 
   #myBooks .buttonBlue {
