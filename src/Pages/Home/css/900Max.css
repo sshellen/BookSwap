@@ -1,2 +1,38 @@
 @media only screen and (max-width: 899px) {
+  #homePage .logo {
+    margin-top: 20px;
+    text-align: center;
+  }
+  h3.tagline {
+    font-size: 16px;
+    text-align: center;
+  }
+  #homePage .twoCol {
+    flex-flow: column wrap;
+  }
+  #homePage .twoCol {
+    width: 100%;
+    max-width: 400px;
+  }
+  #homePage .twoCol h4 {
+    width: 100%;
+    max-width: 400px;
+  }
+  #homePage form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #homePage .formRow input,
+  #homePage .formRow textarea {
+    width: 100%;
+    max-width: 400px;
+  }
+  #homePage .dashedLine {
+    border-bottom: 1px dashed #f5f5f5;
+    height: 1px;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px 0;
+  }
 }

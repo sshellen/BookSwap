@@ -75,135 +75,142 @@ class Home extends React.Component {
   };
   render() {
     return (
-      <div id="homePage" className="section">
-        <img src={logo} className="logo" />
-        <h3 className="tagline">
-          Keep your bookshelf in order. Trade instead of save.
-        </h3>
-        <div className="dashedLine wrapper" />
-        <div className="twoCol">
-          <h4>Sign In</h4>
-          <form
-            className="profileForm"
-            onSubmit={(e) => {
-              this.props.history.push("/myBooks");
-              return false;
-            }}
-          >
-            <div className="formRow">
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                defaultValue=""
-              />
+      <div id="homePage">
+        <div className="section">
+          <div className="wrapper">
+            <div className="logoTagline">
+              <img src={logo} className="logo" />
+              <h3 className="tagline">
+                Keep your bookshelf in order. Trade instead of save.
+              </h3>
             </div>
-            <div className="formRow">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                defaultValue=""
-              />
-            </div>
+            <div className="dashedLine" />
+            <div className="twoCol">
+              <h4>Sign In</h4>
+              <form
+                className="profileForm"
+                onSubmit={(e) => {
+                  this.props.history.push("/myBooks");
+                  return false;
+                }}
+              >
+                <div className="formRow">
+                  <label htmlFor="username">Username</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    defaultValue=""
+                  />
+                </div>
+                <div className="formRow">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    defaultValue=""
+                  />
+                </div>
 
-            <div className="buttonRow">
-              <button className="buttonBlue" type="submit">
-                SUBMIT
-              </button>
+                <div className="buttonRow">
+                  <button className="buttonBlue" type="submit">
+                    SUBMIT
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-        <div className="dashedLine wrapper" />
-        <div
-          className={
-            this.state.submitSuccess === false ||
-            this.state.passwordMatch === false
-              ? "alertMessage"
-              : ""
-          }
-          id="alertMessage"
-          tabIndex={0}
-        >
-          {this.state.passwordMatch === false && (
-            <p>Your passwords don't match.</p>
-          )}
-          {this.state.submitSuccess === false && (
-            <>
-              <p>
-                There are required fields on this page that have not been filled
-                out.
-              </p>
+            <div className="dashedLine" />
+            <div
+              className={
+                this.state.submitSuccess === false ||
+                this.state.passwordMatch === false
+                  ? "alertMessage"
+                  : ""
+              }
+              id="alertMessage"
+              tabIndex={0}
+            >
+              {this.state.passwordMatch === false && (
+                <p>Your passwords don't match.</p>
+              )}
+              {this.state.submitSuccess === false && (
+                <>
+                  <p>
+                    There are required fields on this page that have not been
+                    filled out.
+                  </p>
 
-              <p>Please see errors below.</p>
-            </>
-          )}
-        </div>
-        <div className="twoCol">
-          <h4>Sign Up</h4>
-          <form
-            className="profileForm"
-            onSubmit={(e) => {
-              this.onSubmit(e);
-              return false;
-            }}
-          >
-            <div className="formRow">
-              <label htmlFor="name">
-                Name<sup>*</sup>
-              </label>
-              <input type="text" id="name" name="name" defaultValue="" />
+                  <p>Please see errors below.</p>
+                </>
+              )}
             </div>
-            <div className="formRow">
-              <label htmlFor="email">
-                Email<sup>*</sup>
-              </label>
-              <input type="text" id="email" name="email" defaultValue="" />
+            <div className="twoCol">
+              <h4>Sign Up</h4>
+              <form
+                className="profileForm"
+                onSubmit={(e) => {
+                  this.onSubmit(e);
+                  return false;
+                }}
+              >
+                <div className="formRow">
+                  <label htmlFor="name">
+                    Name<sup>*</sup>
+                  </label>
+                  <input type="text" id="name" name="name" defaultValue="" />
+                </div>
+                <div className="formRow">
+                  <label htmlFor="email">
+                    Email<sup>*</sup>
+                  </label>
+                  <input type="text" id="email" name="email" defaultValue="" />
+                </div>
+                <div className="formRow">
+                  <label htmlFor="username">
+                    Username<sup>*</sup>
+                  </label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    defaultValue=""
+                  />
+                </div>
+                <div className="formRow">
+                  <label htmlFor="password">
+                    Password<sup>*</sup>
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    defaultValue=""
+                  />
+                </div>
+                <div className="formRow">
+                  <label htmlFor="passwordCopy">
+                    Re-Type Password<sup>*</sup>
+                  </label>
+                  <input
+                    type="password"
+                    id="passwordCopy"
+                    name="passwordCopy"
+                    defaultValue=""
+                  />
+                </div>
+                <div className="requiredFields">
+                  <sup>*</sup>Required fields
+                </div>
+                <div className="buttonRow">
+                  <button className="buttonBlue" type="submit">
+                    SUBMIT
+                  </button>
+                </div>
+              </form>
+              <div className="space40" />
             </div>
-            <div className="formRow">
-              <label htmlFor="username">
-                Username<sup>*</sup>
-              </label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                defaultValue=""
-              />
-            </div>
-            <div className="formRow">
-              <label htmlFor="password">
-                Password<sup>*</sup>
-              </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                defaultValue=""
-              />
-            </div>
-            <div className="formRow">
-              <label htmlFor="passwordCopy">
-                Re-Type Password<sup>*</sup>
-              </label>
-              <input
-                type="password"
-                id="passwordCopy"
-                name="passwordCopy"
-                defaultValue=""
-              />
-            </div>
-            <div className="requiredFields">
-              <sup>*</sup>Required fields
-            </div>
-            <div className="buttonRow">
-              <button className="buttonBlue" type="submit">
-                SUBMIT
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     );
