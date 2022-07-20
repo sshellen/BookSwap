@@ -89,7 +89,11 @@ class AddBook extends React.Component {
                 <form
                   className="addBookForm"
                   onSubmit={(e) => {
-                    this.onSubmit(e);
+                    this.onSubmit(e, [
+                      "bookTitle",
+                      "bookAuthor",
+                      "bookDescription",
+                    ]);
                     return false;
                   }}
                 >

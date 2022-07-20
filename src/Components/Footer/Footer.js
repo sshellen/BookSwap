@@ -35,8 +35,14 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        <img
+          src="http://www.blue-bee.com/img/cleardot.png"
+          alt=""
+          width="1px"
+          height="1px"
+        />
       </div>
-      <div className="copyright">&copy;2022 BookSwap </div>
+      <div className="copyright">&copy;2022 BookSwap</div>
     </div>
   );
 };
