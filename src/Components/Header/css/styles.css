@@ -12,8 +12,8 @@
   z-index: 100;
 }
 #header .desktop .pulldownMenu ul {
-  background-color: #00aeef;
-  border: 1px solid #00aeef;
+  background-color: #1172a3;
+  border: 1px solid #1172a3;
   margin: 0;
   padding: 0;
 }
@@ -28,7 +28,7 @@
   padding: 10px 0 5px 0;
 }
 #header .header.wrapper {
-  background-color: #00aeef;
+  background-color: #1172a3;
 }
 #header .header .nav {
   justify-content: flex-end;
